@@ -6,6 +6,7 @@ public class VariableAssignmentActivity {
         a = 10;
         b = 2;
         c = 3;
-        System.out.println("Result of (" + a + " + " + b + " ) * " + c + " is " + ((a+b)*c));
+        a = 12;
+        System.out.println("Result of (" + a + " + " + b + ") * " + c + " is " + ((a+b)*c));
     }
 }
