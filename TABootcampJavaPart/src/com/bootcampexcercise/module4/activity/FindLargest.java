@@ -7,6 +7,8 @@ public class FindLargest {
         if(num1>num2){
             System.out.println((int) num1 + ">"+(int) num2);
 
+        }else if(num1 == num2){
+            System.out.println((int) num1 + "="+(int) num2);
         }else{
             System.out.println((int) num1 + "<"+(int) num2);
         }
