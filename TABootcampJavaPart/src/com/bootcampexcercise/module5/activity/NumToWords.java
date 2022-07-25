@@ -4,37 +4,38 @@ public class NumToWords {
     public static void main(String args[]){
         int x = 5;
         switch(x){
-            case (1 == x):
+            case 1:
                 System.out.println("one");
                 break;
-            case (2 == x):
+            case 2:
                 System.out.println("two");
                 break;
-            case (3 == x):
+            case 3:
                 System.out.println("three");
                 break;
-            case (4 == x):
+            case 4:
                 System.out.println("four");
                 break;
-            case (5 == x):
+            case 5:
                 System.out.println("five");
                 break;
-            case (6 == x):
+            case 6:
                 System.out.println("six");
                 break;
-            case (7 == x):
+            case 7:
                 System.out.println("seven");
                 break;
-            case (8 == x):
+            case 8:
                 System.out.println("eight");
                 break;
-            case (9 == x):
+            case 9:
                 System.out.println("nine");
                 break;
-            case (10 == x):
+            case 10:
                 System.out.println("ten");
                 break;
-            default: return;
+            default:
+                System.out.println("implementation to support numbers 1-10");;
         }
     }
 }
