@@ -12,6 +12,7 @@ public class MultiplicationTable {
             for (int j = 0; j < arrLength-1; j++) {
                 System.out.println(num1[i] + " * " + num2[j] +" = "+(num1[i] * num2[j]));
             }
+            System.out.println("-------------");
         }
     }
 }
