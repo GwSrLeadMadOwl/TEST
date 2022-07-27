@@ -9,15 +9,19 @@ public class Rectangle extends Shape{
         this.b = b;
     }
 
-    public double calculateArea(a, b) {
+//    public double setParams(double a, double b){
+//        return a, b;
+//    }
+
+    public double calculateArea() {
         return (a*b);
     }
 
-    public double calculatePerimeter(a, b) {
+    public double calculatePerimeter() {
         return (a+b)*2;
     }
 
     public void setColor(String c) {
-        super.setColor("Sky blue");
+        super.setColor(c);
     }
 }

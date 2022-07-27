@@ -7,15 +7,19 @@ public class Circle extends Shape{
         this.r = r;
     }
 
-    public double calculateArea(r){
+//    public double setRadius(double r){
+//        return r;
+//    }
+
+    public double calculateArea(){
         return (Math.PI * Math.sqrt(r));
     }
 
-    public double calculatePerimeter(r){
+    public double calculatePerimeter(){
         return (Math.PI * r);
     }
 
     public void setColor(String c) {
-        super.setColor("Pink");
+        super.setColor(c);
     }
 }
