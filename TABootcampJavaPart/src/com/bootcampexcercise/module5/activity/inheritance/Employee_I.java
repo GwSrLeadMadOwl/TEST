@@ -1,6 +1,4 @@
-package com.bootcampexcercise.module5.activity;
-
-import com.bootcampexcercise.module5.exsample.Student_I;
+package com.bootcampexcercise.module5.activity.inheritance;
 
 public class Employee_I extends Person_I{
 

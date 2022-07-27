@@ -1,4 +1,4 @@
-package com.bootcampexcercise.module5.polymorphism;
+package com.bootcampexcercise.module5.exsample.polymorphism;
 
 public class PolymorphismSample {
     public static void main(String arg[]) {

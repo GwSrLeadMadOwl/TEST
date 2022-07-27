@@ -1,6 +1,6 @@
-package com.bootcampexcercise.module5.activity;
+package com.bootcampexcercise.module5.activity.abstraction;
 
-public class Circle extends Shape{
+public class Circle extends Shape {
     private double r;
 
     public Circle(double r){

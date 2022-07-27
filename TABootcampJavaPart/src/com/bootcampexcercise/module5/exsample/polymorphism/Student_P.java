@@ -1,4 +1,4 @@
-package com.bootcampexcercise.module5.polymorphism;
+package com.bootcampexcercise.module5.exsample.polymorphism;
 
 public class Student_P extends Person_P {
 

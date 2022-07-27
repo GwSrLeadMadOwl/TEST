@@ -1,4 +1,4 @@
-package com.bootcampexcercise.module5.activity;
+package com.bootcampexcercise.module5.activity.abstraction;
 
 public abstract class Abstraction {
     public static void main(String args[]){
