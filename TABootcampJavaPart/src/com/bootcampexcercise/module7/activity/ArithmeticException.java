@@ -1,6 +1,6 @@
 package com.bootcampexcercise.module7.activity;
 
-public class ArithmeticException {
+public class ArithmeticException extends Throwable {
     //TODO: 1 - Type main method
     public static void main(String[] args) {
         ArithmeticException obj = new ArithmeticException();

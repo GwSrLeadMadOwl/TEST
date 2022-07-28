@@ -21,11 +21,9 @@ public class CustomExceptionActivityTest {
     void validateUser(String name) throws CustomExceptionActivity{
         //array of names
         int flag = 0;
-
         String[] validUsers = {"John", "Mike", "Shanti", "Stacie"};
         try {
 //            System.out.println(Arrays.asList(validUsers).contains(name));
-
             for (int i = 0; i < 4; i++) {
                 if (name == validUsers[i]) {
                     flag++;
@@ -34,8 +32,8 @@ public class CustomExceptionActivityTest {
             if (flag == 0) {
                 throw new CustomExceptionActivity();
             }
-        }catch(CustomExceptionActivity cea){
 
+        }catch(CustomExceptionActivity cea){
             cea.getMessage();
         }finally{
             if(flag > 0) {
