@@ -9,6 +9,7 @@ import java.util.Set;
 public class SetActivity {
 
     public static void main(String[] args) {
+        SetActivity sa = new SetActivity();
         //TODO: 1 - Type code to create a set of names.
         Set namesSet = new Set() {
             @Override
@@ -85,7 +86,7 @@ public class SetActivity {
 
         //TODO: 2 - Call print method to print the set passed as its parameter.
 //        SetActivity.print(namesSet);
-//        namesSet.print();
+        sa.print(namesSet);
         System.out.println(namesSet);
     }
 
