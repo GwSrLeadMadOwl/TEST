@@ -37,7 +37,7 @@ public class Person {
         double bmi = 0;
         if(weight>0 && height>0 && weight<117.9 && height<196) {
             bmi = weight / Math.sqrt(height);
-            System.out.println( "Weight "+weight + "Height "+height+"Result "+ bmi + " BMI");
+            System.out.println( "Weight " + weight + " Height " + height+" Result " + bmi + " BMI");
         }else if(weight>117.9 && height>196){
                 System.out.println("You're not a human.");
         }

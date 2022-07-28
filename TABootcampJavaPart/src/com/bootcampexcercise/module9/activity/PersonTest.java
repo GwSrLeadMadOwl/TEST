@@ -20,22 +20,16 @@ public class PersonTest extends TestCase {
     public void testSetAndGetWeight(){
         //standard test case
         int testWeight1 = 105;
-        assertEquals(null, person.getWeight());
-        assertNull(person.getWeight());
         person.setWeight(testWeight1);
         assertEquals(testWeight1, person.getWeight());
 
         // test case with a negative number
         int testWeight2 = -10;
-        assertEquals(null, person.getWeight());
-        assertNull(person.getWeight());
         person.setWeight(testWeight2);
         assertEquals(testWeight2, person.getWeight());
 
         //test case exceeded limit
         int testWeight3 = 200;
-        assertEquals(null, person.getWeight());
-        assertNull(person.getWeight());
         person.setWeight(testWeight3);
         assertEquals(testWeight3, person.getWeight());
     }
@@ -43,29 +37,26 @@ public class PersonTest extends TestCase {
     public void testSetAndGetHeight(){
         //STANDARD TEST CASE
         float testHeight = 190;
-        assertEquals(null, person.getHeight());
-        assertNull(person.getHeight());
         person.setHeight(testHeight);
         assertEquals(testHeight, person.getHeight());
 
         // test case with a negative number
-        int testHeight2 = -10;
-        assertEquals(null, person.getHeight());
-        assertNull(person.getHeight());
-        person.setWeight(testHeight2);
+        float testHeight2 = -10;
+        person.setHeight(testHeight2);
         assertEquals(testHeight2, person.getHeight());
 
         //test case exceeded limit
-        int testHeight3 = 200;
-        assertEquals(null, person.getHeight());
-        assertNull(person.getHeight());
-        person.setWeight(testHeight3);
+        float testHeight3 = 200;
+        person.setHeight(testHeight3);
         assertEquals(testHeight3, person.getHeight());
     }
 
     //TODO: create unit test for getBodyMassIndex method
     public void testGetBodyMassIndex(){
-        double testBMI;
+        int a = 105;
+        float b = 190;
+        double bmi = a/Math.sqrt(b);
+        assertEquals(bmi, person.getBodyMassIndex(a,b));
     }
 
 }
