@@ -19,7 +19,8 @@ public class TryCatchMe {
             //TODO: create catch for try and use IndexOutOfBoundsException
 
             //TODO: In catch create custom System.out.println message
-            System.out.println(IndexOutOfBoundsException + " Array indexes is out of Boundary");
+//            System.out.println(IndexOutOfBoundsException + " Array indexes is out of Boundary");
+            System.out.println(IndexOutOfBoundsException);
         }finally {
             //TODO: Use method that this message gets printed out whether or not error has occurred
             System.out.println("This should get printed even if there is an exception");
