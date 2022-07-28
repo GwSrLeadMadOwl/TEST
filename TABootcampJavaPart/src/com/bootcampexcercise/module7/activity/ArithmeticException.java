@@ -17,7 +17,7 @@ public class ArithmeticException {
             int result = num1 / num2;
             System.out.println("The result is :" + result);
         }catch(java.lang.ArithmeticException ae){
-            System.out.println(ae);
+            System.out.println(ae + " Wrong inputs!!!!");
         }finally{
             System.out.println("Thank you for using this program.");
         }
