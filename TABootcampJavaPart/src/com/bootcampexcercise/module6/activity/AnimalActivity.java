@@ -13,6 +13,7 @@ public class AnimalActivity {
 
         //TODO: For mammal set animal to cat
         mammal.setAnimal(cat);
+
         //TODO: execute for mammal animalIsSleeping()
         mammal.animalIsSleeping();
 
