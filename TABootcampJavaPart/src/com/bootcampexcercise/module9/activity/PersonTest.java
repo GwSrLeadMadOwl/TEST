@@ -53,10 +53,23 @@ public class PersonTest extends TestCase {
 
     //TODO: create unit test for getBodyMassIndex method
     public void testGetBodyMassIndex(){
+        //Standard testing
         int a = 105;
         float b = 190;
         double bmi = a/Math.sqrt(b);
         assertEquals(bmi, person.getBodyMassIndex(a,b));
+
+        //test case with a negative number
+        int a2 = -105;
+        float b2 = -190;
+        double bmi2 = a/Math.sqrt(b);
+        assertEquals(bmi2, person.getBodyMassIndex(a,b));
+
+        //test case exceeded limit
+        int a3 = 200;
+        float b3 = 200;
+        double bmi3 = a/Math.sqrt(b);
+        assertEquals(bmi3, person.getBodyMassIndex(a,b));
     }
 
 }
