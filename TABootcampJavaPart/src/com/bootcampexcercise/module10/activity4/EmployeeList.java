@@ -30,8 +30,8 @@ public class EmployeeList {
 
         Employee bum = new Employee();
         bum.setJobTitle("Bum");
-        bum.setJobTitle("GroveStreetFamily");
-        bum.setSalary(300);
+        bum.setCompany("GroveStreetFamily");
+        bum.setSalary(30000000);
 
         list.add(driver);
         list.add(hitman);
@@ -39,16 +39,14 @@ public class EmployeeList {
         list.add(master);
         list.add(bum);
 
-//        EmployeeList arr = new EmployeeList();
-//        arr.print(list);
-//        Collections.sort(list);
+        EmployeeList arr = new EmployeeList(); //initialise the class to call this method, not by the object
         System.out.println(list);
-        System.out.println("The Employee whose salary is the highest is: " + list.getHighestPaidEmp());
-
+        System.out.println("The Employee whose salary is the highest is: " + arr.getHighestPaidEmp());
     }
 
-    public double getHighestPaidEmp(){
+    public String getHighestPaidEmp(){
         double high = 0;
+        String name = "Unknown";
 
         if (list.size() > 1){
 
@@ -57,11 +55,13 @@ public class EmployeeList {
                     .max(Comparator.comparingDouble(Employee::getSalary));
 
             high =  max.get().getSalary();
+            name = max.get().getJobTitle();
 
         }else if (list.size() == 1){
 
             high = list.get(0).getSalary();
+            name = list.get(0).getJobTitle();
         }
-        return high;
+        return name;
     }
 }
