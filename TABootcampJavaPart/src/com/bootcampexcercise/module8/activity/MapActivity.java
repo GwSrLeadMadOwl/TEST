@@ -27,7 +27,8 @@ public class MapActivity {
 
         //You can use an iterator to access keys
         System.out.println("*************************************");
-        System.out.println("Key\tValue");
+        System.out.println("Key "+"\t"+"Value");
+        System.out.println("-------------------------------------");
         Iterator it = keySet.iterator();
         while (it.hasNext()) {
             String key = (String) it.next();
