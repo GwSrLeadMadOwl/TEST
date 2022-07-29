@@ -1,27 +1,88 @@
 package com.bootcampexcercise.module10.activity3;
 
-public class CalculatorTest {
-    public static void main(String args[]) throws CustomizedException {
-        CalculatorTest cal = new CalculatorTest();
+import junit.framework.TestCase;
 
-        cal.multiply(10, 2);
-        cal.multiply(100, 200);
+public class CalculatorTest extends TestCase {
+
+    private Calculator calculator;
+
+    protected void setUp() throws Exception {
+        super.setUp();
+        calculator = new Calculator();
     }
 
-    public double multiply(double a, double b) throws CustomizedException{
-        double res = 0;
-        try {
-            return res =(a * b);
-//            if(res>=2000){ Unreachable statement
-                throw new CustomizedException();
-//            }
-        }catch(CustomizedException ce){
-            ce.getMessage();
-        }finally {
-            if(res>0 && res<2000){
-                System.out.println(res);
-            }
-        }
-        return res;
+    protected void tearDown() throws Exception {
+        calculator = null;
+        super.tearDown();
+    }
+
+    public void testGetSum() {
+
+        double a = 5;
+        double b = 10;
+        assertEquals(15.0, (calculator.add(a,b)));
+        assertEquals(15.0, (calculator.add(b,a)));
+
+        a = -5;
+        b = 10;
+        assertEquals(5.0, (calculator.add(a,b)));
+        assertEquals(5.0, (calculator.add(b,a)));
+
+        a = -5;
+        b = -10;
+        assertEquals(-15.0, (calculator.add(a,b)));
+        assertEquals(-15.0, (calculator.add(b,a)));
+    }
+
+    public void testGetDifference() {
+
+        double a = 3;
+        double b = 2;
+        assertEquals(1.0, (calculator.subtract(a,b)));
+        assertEquals(-1.0, (calculator.subtract(b,a)));
+
+        a = 5;
+        b = -4;
+        assertEquals(9.0, (calculator.subtract(a,b)));
+        assertEquals(-9.0, (calculator.subtract(b,a)));
+
+        a = -10;
+        b = -5;
+        assertEquals(-5.0, (calculator.subtract(a,b)));
+        assertEquals(5.0, (calculator.subtract(b,a)));
+    }
+
+    public void testGetProduct() {
+
+        double a = 5;
+        double b = 10;
+        assertEquals(50.0, (calculator.multiply(a,b)));
+        assertEquals(50.0, (calculator.multiply(b,a)));
+
+        a = -5;
+        b = 10;
+        assertEquals(-50.0, (calculator.multiply(a,b)));
+        assertEquals(-50.0, (calculator.multiply(b,a)));
+
+        a = -3;
+        b = -10;
+        assertEquals(30.0, (calculator.multiply(a,b)));
+        assertEquals(30.0, (calculator.multiply(b,a)));
+    }
+
+    public void testGetQuotient() {
+
+        double a = 10;
+        double b = 5;
+        assertEquals(2.0, (calculator.divide(a,b)));
+        assertEquals(0.5, (calculator.divide(b,a)));
+
+        a = 9;	b = -3;
+        assertEquals(-3.0, (calculator.divide(a,b)));
+        assertEquals(-0.3333333333333333, (calculator.divide(b,a)));
+
+        a = -10;	b = -5;
+        assertEquals(2.0, (calculator.divide(a,b)));
+        assertEquals(0.5, (calculator.divide(b,a)));
     }
 }

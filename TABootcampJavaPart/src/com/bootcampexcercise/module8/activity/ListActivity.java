@@ -29,12 +29,12 @@ public class ListActivity {
 
         //2 - Use Iterator to iterate over this list.
         Iterator<Object> nameOfIterator = list.iterator();
-//        System.out.println("*** Work of iterator ***");
-//        while (nameOfIterator.hasNext()) {
-//            System.out.println(nameOfIterator.next());
-//        }
+        System.out.println("*** Work of iterator ***");
+        while (nameOfIterator.hasNext()) {
+            System.out.println(nameOfIterator.next());
+        }
 
-//        System.out.println("*** Work of for loop ***");
+        System.out.println("*** Work of for loop ***");
         for (Object nameOfMyObject : list) {
             System.out.println(nameOfMyObject.toString());
         }

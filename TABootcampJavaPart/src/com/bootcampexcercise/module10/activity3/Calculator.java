@@ -8,6 +8,8 @@ public class Calculator extends Throwable {
     public static void main(String args[]) throws InvalidAlgorithmParameterException {
         Calculator cal = new Calculator();
         cal.divide(4, 5);
+        cal.multiply(10,2);
+        cal.multiply(100, 200);
     }
 
 
@@ -26,11 +28,7 @@ public class Calculator extends Throwable {
         }catch(IllegalArgumentException iae){
             System.out.println("Invalid inputs");
         }finally {
-            if(a>b){
                 res = (a/b);
-            }else if (a<b){
-                res =(b/a);
-            }
         }
         System.out.println(res);
         return res;
@@ -39,4 +37,22 @@ public class Calculator extends Throwable {
     public double multiply(double a, double b){
         return (a*b);
     }
+
+//    public double multiply(double a, double b) throws CustomizedException{
+//        double res = 0;
+//        try {
+//            return res =(a * b);
+//            if(res>=2000){ //Unreachable statement
+//                throw new CustomizedException();
+//            }
+//        }catch(CustomizedException ce){
+//            ce.getMessage();
+//        }finally {
+//            if(res>0 && res<2000){
+//                System.out.println(res);
+//            }
+//        }
+//        return res;
+//    }
+
 }
