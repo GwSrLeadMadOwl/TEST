@@ -5,6 +5,7 @@ import com.bootcampexcercise.module10.activity1_activity2.Employee;
 import java.util.*;
 
 public class EmployeeList {
+    static List <Employee> list = new ArrayList <Employee>();
 
     public static void main(String[] args) {
         Employee driver = new Employee();
@@ -32,7 +33,6 @@ public class EmployeeList {
         bum.setJobTitle("GroveStreetFamily");
         bum.setSalary(300);
 
-        List <Employee> list = new ArrayList <Employee>();
         list.add(driver);
         list.add(hitman);
         list.add(programmer);
@@ -41,48 +41,27 @@ public class EmployeeList {
 
 //        EmployeeList arr = new EmployeeList();
 //        arr.print(list);
-        Collections.sort(list);
+//        Collections.sort(list);
         System.out.println(list);
+        System.out.println("The Employee whose salary is the highest is: " + list.getHighestPaidEmp());
+
     }
 
-    void print(List list)
-    {
-        Iterator<Object> nameOfIterator = list.iterator();
-        for (Object nameOfMyObject : list) {
-            System.out.println(nameOfMyObject.toString());
+    public double getHighestPaidEmp(){
+        double high = 0;
+
+        if (list.size() > 1){
+
+            Optional<Employee> max = list
+                    .stream()
+                    .max(Comparator.comparingDouble(Employee::getSalary));
+
+            high =  max.get().getSalary();
+
+        }else if (list.size() == 1){
+
+            high = list.get(0).getSalary();
         }
+        return high;
     }
-
-    void getHighestPaidEmp(){
-        System.out.println("The Employee whose salary is the highest is: ");
-    }
-//    void sortByValue(boolean order)
-//    {
-//        List<Map.Entry<String, Double>> list = new LinkedList<Map.Entry<String, Double>>(list.entrySet());
-//
-//        Collections.sort(list, new Comparator<Map.Entry<String, Double>>(){
-//            public int compare(Map.Entry<String, Double> o1, Map.Entry<String, Double> o2){
-//                return o1.getValue().compareTo(o2.getValue());
-//            }
-//        });
-//
-//        Map<String, Double> sortedMap = new LinkedHashMap<String, Double>();
-//
-//        for (Map.Entry<String, Double> entry : list)
-//        {
-//            sortedMap.put(entry.getKey(), entry.getValue());
-//        }
-//        System.out.println(sortedMap);
-////        print(sortedMap);
-//    }
-
-//    public void printList(List<String, Double> list)
-//        {
-//            System.out.println("Company "+" \t "+"Price ");
-//            for (Map.Entry<String, Double> entry : list.toString())
-//            {
-//                System.out.println(entry.getKey() +" \t"+entry.getValue());
-//            }
-//            System.out.println("\n");
-//        }
 }
